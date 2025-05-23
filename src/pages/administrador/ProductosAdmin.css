@@ -1,0 +1,277 @@
+/* Contenedor principal */
+.productos-admin-container {
+  padding: 20px;
+  background-color: #fff9dc;
+  border-radius: 10px;
+}
+
+/* Buscador con ícono */
+.barra-busqueda {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.barra-busqueda input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.btn-buscar {
+  margin-left: -45px;
+  background-color: #00bfff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Tabla de productos */
+.tabla-productos {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-productos th,
+.tabla-productos td {
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.tabla-productos th {
+  background-color: #63c8f2;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tabla-productos td {
+  background-color: #ffffff;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Botones de acción */
+.boton-icono {
+  background-color: white;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botones-accion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.boton-icono:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.icono-accion {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Botones inferiores */
+.botones-inferiores {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.botones-inferiores button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-verde {
+  background-color: #00d26a;
+}
+
+.btn-amarillo {
+  background-color: #f4b000;
+}
+
+.btn-azul {
+  background-color: #2d90e9;
+}
+
+.botones-filtro {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* <- este crea el espacio con la tabla */
+}
+
+.btn-filtrar {
+  border: 2px solid #3b82f6;
+  background-color: white;
+  color: #3b82f6;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-revertir {
+  border: 2px solid #f63b3b;
+  background-color: white;
+  color: #f63b3b;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-filtrar:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.btn-revertir:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.cerrar-icono {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+}
+
+.contenedor-centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contenedor-tabla {
+  max-width: 950px;
+  /* ajusta a tu gusto */
+  margin: 0 auto;
+  /* centra horizontalmente */
+  width: 100%;
+}
+
+.contenedor-tabla th {
+  background-color: #99d4ea;
+  padding: 12px 20px;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Estilo para las celdas de la tabla */
+.contenedor-tabla th,
+.contenedor-tabla td {
+  border-right: 1px solid #BFE0FF;
+  /* Línea que separa las columnas */
+}
+
+/* Asegúrate de no tener una línea extra al final de la última columna */
+.contenedor-tabla th:last-child,
+.contenedor-tabla td:last-child {
+  border-right: none;
+}
+
+/* Estilo opcional para las filas */
+.contenedor-tabla tr {
+  border-bottom: 1px solid #BFE0FF;
+  /* Línea horizontal entre filas */
+}
+
+.botones-filtro {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+/* Nuevo estilo para el modal de error */
+.modal-overlay-error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Un z-index extremadamente alto para asegurar que esté por encima de todo */
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.modal h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+.botones-inferiores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+.botones-filtro {
+  margin-bottom: 17px !important;
+}
+
+}
