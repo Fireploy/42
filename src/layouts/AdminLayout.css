@@ -1,0 +1,43 @@
+.admin-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  height: 100vh;
+}
+
+.admin-content {
+  overflow-y: auto;
+  background-color: #fff5e1;
+}
+
+.toggle-menu-button {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #f8a1c2;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-menu-button:hover {
+  background-color: #c2185b;
+}
+
+@media (max-width: 700px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .toggle-menu-button {
+    display: block;
+    position: fixed;
+    z-index: 100;
+  }
+}
